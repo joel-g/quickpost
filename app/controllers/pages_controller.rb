@@ -3,6 +3,7 @@ class PagesController < ApplicationController
   end
 
   def home
+    @entry = Entry.new
     @entries = Entry.all
   end
 

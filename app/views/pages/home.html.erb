@@ -7,13 +7,14 @@
 <p><%= entry.body %></p>
 </li>
 <% end %>
-</ul
+</ul>
 
 
-
-<form action='/entries' method='POST'>
-  <input type='text' placeholder="Title" name='entry[title]'><br>
-  <textarea name='entry[body]' rows='3' cols'60'>
-  </textarea>
-  <input type='submit' value='Submit'>
-</form>
+<%= form_for @entry do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <br>
+  <%= f.label :body %>
+  <%= f.text_area :body %>
+  <%= f.submit %>
+<% end %>

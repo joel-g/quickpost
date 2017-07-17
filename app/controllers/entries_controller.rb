@@ -1,6 +1,6 @@
-class EntryController < ApplicationController
+class EntriesController < ApplicationController
   def create
-    p entry_params
+    Entry.create(entry_params)
   end
 
   def entry_params
