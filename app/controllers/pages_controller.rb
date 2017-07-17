@@ -3,6 +3,7 @@ class PagesController < ApplicationController
   end
 
   def home
+    @entries = Entry.all
   end
 
   def contact

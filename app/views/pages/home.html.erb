@@ -1,2 +1,19 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>Quick Post</h1>
+
+<ul>
+<% @entries.each do |entry| %>
+<li>
+<h4><%= entry.title %></h4>
+<p><%= entry.body %></p>
+</li>
+<% end %>
+</ul
+
+
+
+<form action='/entries' method='POST'>
+  <input type='text' placeholder="Title" name='entry[title]'><br>
+  <textarea name='entry[body]' rows='3' cols'60'>
+  </textarea>
+  <input type='submit' value='Submit'>
+</form>
