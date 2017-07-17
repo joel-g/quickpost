@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'entry/create'
+
   #index
   root 'pages#home'
 
@@ -9,7 +11,7 @@ Rails.application.routes.draw do
 
   get 'pages/contact'
 
-  post 'entries'
+  post 'entries', to: 'entries#new'
 
   resources :entries
 
